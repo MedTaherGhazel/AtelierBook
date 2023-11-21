@@ -1,10 +1,13 @@
 import express from 'express';
 import authentication from './authentication';
-import books from './books'
+import programs from './programs'
+import users from './users'
+
 const router= express.Router();
 
 export default(): express.Router =>{
     authentication(router);
-    books(router);  
+    programs(router);  
+    users(router);
     return router ;
 } ;
