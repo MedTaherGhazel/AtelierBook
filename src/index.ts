@@ -25,9 +25,10 @@ server.listen(8088, ()=>{
     console.log('Server running on http://localhost:8088/')
 });
 
-const uri="mongodb+srv://med:med@cluster0.cg38vv7.mongodb.net/?retryWrites=true&w=majority";
+const uriAtlas="mongodb+srv://med:med@cluster0.cg38vv7.mongodb.net/?retryWrites=true&w=majority";
+const uriCompass="mongodb://localhost:27017/PRODUCT"
 mongoose.Promise =Promise;
-mongoose.connect(uri);
-mongoose.connection.on('error',(error:Error)=> console.log('hhhhhhhhhhhhhhhh',error));
+mongoose.connect(uriCompass);
+mongoose.connection.on('error',(error:Error)=> console.log('hhhhhhhhhhhhhhhh nesi lmongo msaker ya bhim',error));
 
 app.use('/', router())
